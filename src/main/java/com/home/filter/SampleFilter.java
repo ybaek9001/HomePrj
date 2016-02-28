@@ -12,35 +12,34 @@ import javax.servlet.http.HttpServletRequest;
 
 public class SampleFilter implements Filter {
 
-  @Override
-  public void destroy() {
-    // TODO Auto-generated method stub
+    @Override
+    public void destroy() {
+        // TODO Auto-generated method stub
 
-  }
+    }
 
-  @Override
-  public void doFilter(ServletRequest request, 
-      ServletResponse response, FilterChain filterChain)
-      throws IOException, ServletException {
-    
-    System.out.println("---------------------------------");
-    
-    HttpServletRequest req = (HttpServletRequest)request;
-    
-    System.out.println(req.getRequestURI());
+    @Override
+    public void doFilter(ServletRequest request,
+                         ServletResponse response, FilterChain filterChain)
+            throws IOException, ServletException {
 
-    System.out.println("---------------------------------");
-    
-    
-    filterChain.doFilter(request, response);
-    
-  }
+        System.out.println("---------------------------------");
 
-  @Override
-  public void init(FilterConfig config) throws ServletException {
-    
-    
+        HttpServletRequest req = (HttpServletRequest) request;
 
-  }
+        System.out.println(req.getRequestURI());
+
+        System.out.println("---------------------------------");
+
+
+        filterChain.doFilter(request, response);
+
+    }
+
+    @Override
+    public void init(FilterConfig config) throws ServletException {
+
+
+    }
 
 }
