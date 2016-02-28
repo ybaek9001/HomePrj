@@ -1,6 +1,5 @@
-package com.yb;
+package com.home;
 
-import com.home.HomeApplicationTests;
 import com.home.domain.MemberVO;
 import com.home.mapper.MemberMapper;
 import org.junit.Test;
